@@ -2,10 +2,37 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <!-- Taken from the Course Examples (Lecture 7)-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="nav-container">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </nav>
+
   </body>
 </html>
