@@ -6,3 +6,23 @@ body {
 a {
   color: #00B7FF;
 }
+
+.social-col a{
+  color: #FFFFFF8C;  /* This is the default color used by the bootstrap navbar-dark for text. */
+  transition: 0.15s ease;
+}
+
+#bootstrap-overrides .social-col a:hover{
+  color:white
+}
+
+#bootstrap-overrides .category-link, .test-col-link{
+  color: #FFFFFF8C;
+  transition: 0.15s ease;
+}
+
+#bootstrap-overrides .category-link:hover, .social-col:hover{
+  color:white
+}
+
+

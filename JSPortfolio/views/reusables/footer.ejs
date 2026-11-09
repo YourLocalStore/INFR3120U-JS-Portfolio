@@ -2,10 +2,89 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
+    <link rel="stylesheet" href="/fontawesome-free-7.3.1-web/css/all.css">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+  <!-- Override the Bootstrap CSS, as seen in the Stack Forum provided in course-->
+  <body id="bootstrap-overrides">
+
+    <footer class="bg-dark text-white py-2">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-7 text-start">
+            <header>
+              <h6>
+                <p>© 2026, Joshua.</p>
+              </h6>
+            </header>
+          </div>
+
+          <div class="col-sm-2">
+            <h5><p>Categories</p></h5>
+            <ul class="navbar-nav lh-1">
+              <li class="nav-item">
+                <a class="nav-link category-link" href="/">Home</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link category-link" href="/about">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link category-link" href="/projects">Projects</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link category-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-sm-2">
+            <h5><p>Test Category</p></h5>
+            <ul class="navbar-nav lh-1">
+              <li class="nav-item">
+                <a class="nav-link test-col-link" href="/">Home</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link test-col-link" href="/about">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link test-col-link" href="/projects">Projects</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link test-col-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col text-center">
+            <h5><p>Socials</p></h5>
+            <div class="social-col lh-lg">
+              <a href="https://github.com/YourLocalStore">
+                <i class="fa-brands fa-github fa-xl"></i>
+              </a><br>
+            
+              <a href="https://ca.linkedin.com/in/joshua-tuibuen-436338351">
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+              </a><br>
+
+            </div>
+          </div>
+
+        </div>
+      
+    
+      </div>
+    </footer>
+
+
   </body>
 </html>
