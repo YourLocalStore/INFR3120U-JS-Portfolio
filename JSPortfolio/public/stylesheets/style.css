@@ -1,10 +1,15 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.row .copyright a{
+  pointer-events: none;
+  color: white;
 }
 
 .social-col a{
@@ -23,6 +28,10 @@ a {
 
 #bootstrap-overrides .category-link:hover, .social-col:hover{
   color:white
+}
+
+#bootstrap-overrides footer div .row a{
+  text-decoration: none;
 }
 
 

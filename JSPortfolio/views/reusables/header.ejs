@@ -1,35 +1,60 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-  </head>
-  <body>
+<!-- Taken from the Course Examples (Lecture 7)-->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">test test</a>
 
-    <!-- Taken from the Course Examples (Lecture 7)-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
+    <!-- https://getbootstrap.com/docs/5.0/utilities/spacing/ -->
+    <ul class="navbar-nav me-auto ps-4">
+      <li class="nav-item">
+        <% if (title=="Joshua") { %>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <% } else { %>
             <a class="nav-link" href="/">Home</a>
-          </li>
+            <% } %>
+      </li>
 
-          <li class="nav-item">
+      <li class="nav-item">
+        <% if (title=="About Me") { %>
+          <a class="nav-link active" aria-current="page" href="/about">About</a>
+          <% } else { %>
             <a class="nav-link" href="/about">About</a>
-          </li>
+            <% } %>
+      </li> 
 
-          <li class="nav-item">
+      <li class="nav-item">
+        <% if (title=="Projects") { %>
+          <a class="nav-link active" aria-current="page" href="/projects">Projects</a>
+          <% } else { %>
             <a class="nav-link" href="/projects">Projects</a>
-          </li>
+            <% } %>
+      </li>
 
-          <li class="nav-item">
+      <li class="nav-item">
+        <% if (title=="Contact Me") { %>
+          <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+          <% } else { %>
             <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+            <% } %>
+      </li>
+    </ul>
 
-  </body>
-</html>
+    <div class="social-col lh-lg">
+
+      <ul class="navbar navbar-nav ms-auto pe-2">
+        <li class="nav-item">
+          <a href="https://github.com/YourLocalStore">
+            <i class="fa-brands fa-github fa-xl"></i>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="https://ca.linkedin.com/in/joshua-tuibuen-436338351">
+            <i class="fa-brands fa-linkedin fa-xl"></i>
+          </a><br>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
