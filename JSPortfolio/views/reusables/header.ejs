@@ -1,7 +1,9 @@
 <!-- Taken from the Course Examples (Lecture 7)-->
 <nav class="navbar navbar-expand navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">test test</a>
+    <a class="navbar-brand" href="/">
+      <img class="img-fluid" src="/images/jt_sig2.png" alt="">
+    </a>
 
     <!-- https://getbootstrap.com/docs/5.0/utilities/spacing/ -->
     <ul class="navbar-nav me-auto ps-4">
@@ -39,8 +41,7 @@
     </ul>
 
     <div class="social-col lh-lg">
-
-      <ul class="navbar navbar-nav ms-auto pe-2">
+      <ul class="navbar navbar-nav ms-auto pe-2 gap-3">
         <li class="nav-item">
           <a href="https://github.com/YourLocalStore">
             <i class="fa-brands fa-github fa-xl"></i>
@@ -52,8 +53,51 @@
             <i class="fa-brands fa-linkedin fa-xl"></i>
           </a><br>
         </li>
+        
+        <li class="nav-item">
+          <a href="mailto:joshua.tuibuen@ontariotechu.net">
+            <i class="fa-solid fa-envelope fa-xl"></i>
+          </a><br>
+        </li>
       </ul>
+    </div>
 
+    <!-- Derived from https://getbootstrap.com/docs/5.3/components/navbar/ and
+         https://getbootstrap.com/docs/5.0/components/dropdowns/-->
+
+    <div id="header-navbar-dropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" 
+            href="#" 
+            role="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="https://github.com/YourLocalStore">
+                <i class="fa-brands fa-github fa-xl"></i>
+                Github
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://ca.linkedin.com/in/joshua-tuibuen-436338351">
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+                Linkedin
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="mailto:joshua.tuibuen@ontariotechu.net">
+                <i class="fa-solid fa-envelope fa-xl"></i>
+                Feedback
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
 
   </div>

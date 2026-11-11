@@ -2,18 +2,134 @@
 <html>
   
   <head>
-    <title><%= title %></title>
     <link rel="stylesheet" href="/fontawesome-free-7.3.1-web/css/fontawesome.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/media.css' />
+
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
   </head>
 
   <%- include("../reusables/header.ejs") %>
   <body>
+    <!-- 1st Section: Welcome -->
+    <div id="welcome-section">
+      <section class="bg-dark text-center">
+        <div class="container-fluid">
 
-    <h1><%= title %></h1>
-    <p>Welcome to my Portfolio!</p>
+          <img class="banner-img" src="/images/home_banner_placeholder.png" alt="...">
+
+          <div class="row">
+            <div class="welcome-text col pt-5 pb-5">
+              <h1><%= title %> Tuibuen</h1>
+              <p>Networking and IT Security Student</p>
+            </div>
+          </div>
+
+          <div class="welcome-sig">
+            <img src="images/jt_sig2.png" alt="..." >
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- 2nd Section: About Me -->
+    <div id="about-me">
+      <section class="bg-light py-4 ps-sm-1">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col text-start">
+
+              <div class="card text-bg-secondary" style="width:75%; height:465px; border: none;">
+                <div class="card-body">
+                  <h4 class="card-title">About Me</h4>
+                  <div class="card-text">
+                    <p>Here's some information about me...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col text-end">
+              <div class="card text-bg-secondary ms-auto" style="width:75%; height:465px; border: none">
+                <div class="card-body">
+                  <h4 class="card-title">About Me</h4>
+                  <div class="card-text">
+                    <p>Here's some information about me...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="jt-image">
+            <img src="/images/jt_about.png" alt="..." class="mx-auto">
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- 3rd Section: Projects -->
+    <div id="projects">
+      <section class="bg-light py-2 ps-1">
+        <div class="container-fluid">
+          <div class="row">
+            
+            <div class="col-12">
+              <div id="project-home-header">
+                <div class="container-fluid pt-3">
+                  <h2>My Projects</h2>
+                  <p>Here are some of the projects I've made!</p>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="col-12 col-md-4 text-center py-3">
+              <div class="card">
+                <img class="card-img-top" style="height:14rem; object-fit: cover;" src="images/placeholder.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">Project 1</h4>
+                  <p class="card-text">Something about Project 1...</p>
+                  <a href="/projects" class="btn btn-secondary">See More!</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 text-center py-3">
+              <div class="card">
+                <img class="card-img-top" style="height:14rem; object-fit: cover" src="images/placeholder.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">Project 2</h4>
+                  <p class="card-text">Something about Project 2...</p>
+                  <a href="/projects" class="btn btn-secondary">See More!</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 text-center py-3">
+              <div class="card">
+                <img class="card-img-top" style="height:14rem; object-fit: cover" src="images/placeholder.jpg" alt="">
+                <div class="card-body">
+                  <h4 class="card-title">Project 3</h4>
+                  <p class="card-text">Something about Project 3...</p>
+                  <a href="/projects" class="btn btn-secondary">See More!</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+
+      </section>
+    </div>
 
   </body>
   <%- include("../reusables/footer.ejs") %>

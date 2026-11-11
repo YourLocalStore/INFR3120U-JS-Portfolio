@@ -1,0 +1,49 @@
+/* FOR THE 'XS' BREAKPOINT */
+@media only screen and (max-width:575px) {
+    #projects img {
+        object-position: 50% 85%;
+    }
+    
+    .social-col ul a i{
+        display: none;
+    }
+
+    .navbar-brand img{
+        display: none;
+    }
+}
+
+/* FOR THE 'SM' BREAKPOINT */
+@media only screen and (min-width:576px) and (max-width:767px) {
+    #projects img {
+        object-position: 50% 85%;
+    }
+
+    .social-col ul a i{
+        display: none;
+    }
+
+    .navbar-brand img{
+        display: none;
+    }
+
+}
+
+/* FOR THE 'MD' BREAKPOINT */
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .social-col ul a i{
+        display: none;
+    }
+
+}
+
+/* FOR THE 'LG' BREAKPOINT */
+@media only screen and (min-width:992px) {
+    #projects img {
+        object-position: 50% 85%;
+    }
+
+    #header-navbar-dropdown .navbar-nav .nav-item a i{
+        display:none;
+    }
+}

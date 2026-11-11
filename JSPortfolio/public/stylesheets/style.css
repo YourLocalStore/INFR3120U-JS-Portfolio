@@ -1,10 +1,83 @@
 body {
   padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Inter";
+  font-size: 18px;
 }
 
 a {
   color: #00B7FF;
+}
+
+/* This is so that any element using position:absolute in this 
+container inherits itself to that container */
+#welcome-section .container-fluid{
+  position:relative;
+}
+
+#welcome-section .container-fluid .welcome-text{
+  font-size: 16px;
+  font-weight: 100;
+  z-index: 1;
+  color:white;
+}
+
+#welcome-section .container-fluid .welcome-text h1{
+  font-size: 52px;
+  font-weight: 600;
+  font-style:italic;
+  color:white;
+}
+
+/* This section is reserved for the index page. */
+#welcome-section .container-fluid .welcome-sig img{
+  position:absolute;
+  width: 600px;
+  height: auto;
+
+  top:50%; /* 50% from the top-left corner or the parent container */
+  left: 50%; /* 50% from the bottom-left corner or the parent container */
+  transform: translate(-50%, -50%); /* Move image left by 50% of its width, and move up 50% of the image height */
+
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0; /* Sets the stack order of elements, lower #s --> Set below some element */
+}
+
+#welcome-section .container-fluid .banner-img{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  filter:brightness(0.45);
+  z-index: 0;
+}
+
+#about-me section .container-fluid #jt-image img{
+  display: block;
+  position: relative;
+
+  width:450px;
+  max-width: 100%;
+  height:auto;
+  margin-top:-565px;
+
+  z-index: 0;
+}
+
+#projects #project-home-header{
+  color:white;
+  background-color: #212529;
+  padding:5px;
+  border-radius:0.25rem
+}
+
+/* This section is reserved for the header and footer sections of the page. */
+.navbar-brand img{
+  width:20rem;
 }
 
 .row .copyright a{
