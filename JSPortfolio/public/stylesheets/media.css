@@ -11,6 +11,10 @@
     .navbar-brand img{
         display: none;
     }
+
+    #about-me #jt-image{
+        display:none
+    }
 }
 
 /* FOR THE 'SM' BREAKPOINT */
@@ -27,6 +31,9 @@
         display: none;
     }
 
+    #about-me #jt-image{
+        display:none
+    }
 }
 
 /* FOR THE 'MD' BREAKPOINT */
@@ -43,6 +50,7 @@
         object-position: 50% 85%;
     }
 
+    #header-navbar-dropdown .navbar-nav .nav-item a, 
     #header-navbar-dropdown .navbar-nav .nav-item a i{
         display:none;
     }

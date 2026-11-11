@@ -17,8 +17,53 @@
   <%- include("../reusables/header.ejs") %>
   <body>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="container-fluid pt-4 pb-5 ps-4">
+      <div class="row">
+        <div class="col-12 text-start">
+          <h3>Contact Me!</h3>
+          <p>Have any comments? Feel free to let me know!</p>
+        </div>
+      </div>
+
+      <form action="mailto:joshua.tuibuen@ontariotechu.net" 
+            method="post" 
+            enctype="text/plain">
+
+        <!--https://getbootstrap.com/docs/5.0/utilities/sizing/
+            Width Control!! -->
+        <div class="mb-3">
+          <label for="n-input" class="form-label">Name</label>
+          <input type="text" 
+                 class="form-control w-50" 
+                 id="n-input" 
+                 aria-describedby="emailHelp"
+                 required>
+          <div id="emailHelp" class="form-text">Enter your name!</div>
+        </div> 
+      
+        <div class="mb-3">
+          <label for="email-input" class="form-label">Email Address</label>
+          <input type="email" 
+                 class="form-control w-50" 
+                 id="email-input" 
+                 aria-describedby="emailHelp"
+                 required>
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="comment-input" class="form-label">Share Any Message!</label><br>
+          <textarea id="comment-input" 
+                    class="form-control w-50"
+                    style="min-height:200px; max-height: 600px;"
+                    name="comments" 
+                    placeholder="Questions, concerns, comments...">
+          </textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
 
   </body>
   <%- include("../reusables/footer.ejs") %>
