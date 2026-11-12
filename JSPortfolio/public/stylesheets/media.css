@@ -15,6 +15,14 @@
     #about-me #jt-image{
         display:none
     }
+
+    #about-me #card-right-of-jt{
+        display:none
+    }
+
+    #about-me #card-left-of-jt .card{
+        width:100% !important
+    }
 }
 
 /* FOR THE 'SM' BREAKPOINT */
@@ -34,6 +42,14 @@
     #about-me #jt-image{
         display:none
     }
+
+    #about-me #card-right-of-jt{
+        display:none
+    }
+
+    #about-me #card-left-of-jt .card{
+        width:100% !important
+    }
 }
 
 /* FOR THE 'MD' BREAKPOINT */
@@ -42,6 +58,17 @@
         display: none;
     }
 
+    #about-me #jt-image{
+        display:none
+    }
+
+    #about-me #card-right-of-jt{
+        display:none
+    }
+
+    #about-me #card-left-of-jt .card{
+        width:100% !important
+    }
 }
 
 /* FOR THE 'LG' BREAKPOINT */

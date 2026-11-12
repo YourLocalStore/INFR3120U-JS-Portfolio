@@ -56,7 +56,13 @@ container inherits itself to that container */
   z-index: 0;
 }
 
+#about-me section .container-fluid #card-left-of-jt .card-body h1,
+#about-me section .container-fluid #card-right-of-jt .card-body h1{
+  font-weight: 600;
+}
+
 #about-me section .container-fluid #jt-image img{
+  opacity: 0%;
   display: block;
   position: relative;
 
@@ -66,6 +72,16 @@ container inherits itself to that container */
   margin-top:-565px;
 
   z-index: 0;
+
+  animation-name: imgFadeIn;
+  animation-delay:0.15s;
+  animation: imgFadeIn 0.75s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes imgFadeIn{
+  0%{opacity:0%;}
+  100%{opacity:100%;}
 }
 
 #projects #project-home-header{
