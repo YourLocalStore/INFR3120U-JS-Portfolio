@@ -17,7 +17,7 @@
   <%- include("../reusables/header.ejs") %>
   <body>
 
-    <div class="container-fluid pt-4 pb-5 ps-4 col-12 col-md-8 col-lg-6 text-center">
+    <div class="contact-form container-fluid pt-3 pb-3 col-12 w-75 text-center">
 
       <div class="row">
         <div class="bg-dark pt-3" style="color:white">
@@ -25,7 +25,7 @@
           <p>Have any comments? Feel free to let me know!</p>
         </div>
         
-        <div class="bg-secondary pt-3 pb-3" style="color:white">
+        <div class="form-container bg-secondary pt-3 pb-3" style="color:white">
           <form action="mailto:joshua.tuibuen@ontariotechu.net" 
                 method="post" 
                 enctype="text/plain">
@@ -35,7 +35,7 @@
             <div class="mb-3">
               <label for="n-input" class="form-label">Name</label>
               <input type="text" 
-                      class="form-control w-50 mx-auto" 
+                      class="form-control w-100 mx-auto" 
                       id="n-input" 
                       required>
             </div> 
@@ -43,7 +43,7 @@
             <div class="mb-3">
               <label for="email-input" class="form-label">Email Address</label>
               <input type="email" 
-                      class="form-control w-50 mx-auto" 
+                      class="form-control w-100 mx-auto" 
                       id="email-input" 
                       required>
             </div>
@@ -51,7 +51,7 @@
             <div class="mb-3">
               <label for="comment-input" class="form-label">Share Any Message!</label><br>
               <textarea id="comment-input" 
-                        class="form-control w-50 mx-auto"
+                        class="form-control w-100 mx-auto"
                         style="min-height:200px; max-height: 600px"
                         name="comments" placeholder="Questions, concerns, comments..."></textarea>
             </div>

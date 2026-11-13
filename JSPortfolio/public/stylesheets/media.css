@@ -1,5 +1,9 @@
 /* FOR THE 'XS' BREAKPOINT */
 @media only screen and (max-width:575px) {
+    body {
+        zoom: 1 !important;
+    }   
+
     #projects img {
         object-position: 50% 85%;
     }
@@ -12,21 +16,21 @@
         display: none;
     }
 
-    #about-me #jt-image{
-        display:none
-    }
-
     #about-me #card-right-of-jt{
-        display:none
+        display:none;
     }
 
     #about-me #card-left-of-jt .card{
-        width:100% !important
+        opacity:0;
     }
 }
 
 /* FOR THE 'SM' BREAKPOINT */
 @media only screen and (min-width:576px) and (max-width:767px) {
+    body {
+        zoom: 1 !important;
+    }   
+
     #projects img {
         object-position: 50% 85%;
     }
@@ -39,27 +43,22 @@
         display: none;
     }
 
-    #about-me #jt-image{
-        display:none
-    }
-
     #about-me #card-right-of-jt{
         display:none
     }
 
     #about-me #card-left-of-jt .card{
-        width:100% !important
+        opacity:0;
     }
 }
 
 /* FOR THE 'MD' BREAKPOINT */
-@media only screen and (min-width:768px) and (max-width:991px) {
+@media only screen and (min-width:768px) and (max-width:999px) {
+    body {
+    zoom: 1 !important;
+    } 
     .social-col ul a i{
         display: none;
-    }
-
-    #about-me #jt-image{
-        display:none
     }
 
     #about-me #card-right-of-jt{
@@ -67,12 +66,42 @@
     }
 
     #about-me #card-left-of-jt .card{
-        width:100% !important
+        opacity:0;
     }
+
+
 }
 
-/* FOR THE 'LG' BREAKPOINT */
-@media only screen and (min-width:992px) {
+/* MODIFIED 'LG' BREAKPOINT */
+@media only screen and (min-width:1000px) and (max-width:1199px) {
+    body {
+    zoom: 1 !important;
+    } 
+    #projects img {
+        object-position: 50% 85%;
+    }
+
+    .social-col ul a i{
+        display: none;
+    }
+
+    /* #about-me #card-left-of-jt .card {
+        width:100% !important;
+        text-align: left !important;
+    }
+
+    #about-me #card-right-of-jt .card {
+        width:100% !important;
+        text-align: right !important
+    } */
+    
+    .contact-form .row .form-container form .form-control{
+    width:65% !important;
+    }   
+}
+
+/* MODIFIED 'LG' BREAKPOINT */
+@media only screen and (min-width:1200px){
     #projects img {
         object-position: 50% 85%;
     }
@@ -80,5 +109,9 @@
     #header-navbar-dropdown .navbar-nav .nav-item a, 
     #header-navbar-dropdown .navbar-nav .nav-item a i{
         display:none;
+    }
+
+    .contact-form .row .form-container form .form-control{
+    width:65% !important;
     }
 }
