@@ -16,7 +16,7 @@
 
   <%- include("../reusables/header.ejs") %>
   <body>
-    <div class="container-fluid pt-4">
+    <div class="project-container container-fluid pt-2">
 
       <div class="row">
         <div class="col-12 col-md-8 col-lg-6 w-100 mx-auto">
@@ -31,73 +31,144 @@
         </div>
       </div>
 
-      <div class="row text-center">
-        <div class="col-12 col-md-8 col-lg-6 pb-4 w-45">
-          <div class="card bg-secondary text-white mb-3" style="height:400px">
+      <div class="row text-start">
+
+        <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
+          <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
-              <img class="card-img-top" style="height:14rem; object-fit: cover;" src="images/placeholder.jpg" alt="">
+              <img class="card-img-top" 
+                    style="height:224px; object-fit: cover;" src="images/placeholder.jpg" alt="">
               <div class="card-title pt-3">
-                <h4>Hello!</h4>
+                <h4>Homelab</h4>
               </div class>
       
               <div class="card-text fs-6">
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
+                <p>2026 - Present</p>
+                <hr>
               </div>
+
+              <div class="card-text fs-6 text-end">
+                <p>Docker, Ubuntu Server</p>
+              </div>
+
             </div>
           </div>
-        </div>
-      
-        <div class="col-12 col-md-8 col-lg-6 pb-4 w-45">
-          <div class="card bg-secondary text-white mb-3" style="height:400px">
-            <div class="card-body">
-              <img class="card-img-top" style="height:14rem; object-fit: cover;" src="images/placeholder.jpg" alt="">
-              <div class="card-title pt-3">
-                <h4>Hello!</h4>
-              </div class>
-      
-              <div class="card-text fs-6">
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
-              </div>
-            </div>
-          </div>
+          <a href="homelab" class="btn btn-primary">See More!</a>
         </div>
 
-        <div class="col-12 col-md-8 col-lg-6 pb-4 w-45">
-          <div class="card bg-secondary text-white mb-3" style="height:400px">
+        <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
+          <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
-              <img class="card-img-top" style="height:14rem; object-fit: cover;" src="images/placeholder.jpg" alt="">
+              <img class="card-img-top" style="height:224px; object-fit: cover;" src="images/placeholder.jpg" alt="">
+
               <div class="card-title pt-3">
-                <h4>Hello!</h4>
+                <h4>Multithreaded Sockets</h4>
               </div class>
       
               <div class="card-text fs-6">
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
+                <p>2026</p>
+                <hr>
               </div>
+              <div class="card-text fs-6 text-end">
+                <p>Python</p>
+              </div>
+
             </div>
           </div>
-        </div>
+          <a href="/multithread" class="btn btn-primary">See More!</a>
+        </div>       
 
-        <div class="col-12 col-md-8 col-lg-6 pb-4 w-45">
-          <div class="card bg-secondary text-white mb-3" style="height:400px">
+        <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
+          <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
-              <img class="card-img-top" style="height:14rem; object-fit: cover;" src="images/placeholder.jpg" alt="">
+              <img class="card-img-top" style="height:224px; object-fit: cover;" src="images/placeholder.jpg" alt="">
+
               <div class="card-title pt-3">
-                <h4>Hello!</h4>
+                <h4>Student Management System</h4>
               </div class>
       
               <div class="card-text fs-6">
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
+                <p>2025</p>
+                <hr>
               </div>
+              <div class="card-text fs-6 text-end">
+                <p>Python</p>
+              </div>
+              
             </div>
           </div>
+          <a href="sms" class="btn btn-primary">See More!</a>
         </div>
 
+        <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
+          <div class="card bg-dark text-white" style="height:425px">
+            <div class="card-body">
+              <img class="card-img-top" 
+                   style="height:224px; object-fit: cover;" src="images/placeholder.jpg" alt="">
+
+              <div class="card-title pt-3">
+                <h4>Designing Networks</h4>
+              </div class>
+      
+              <div class="card-text fs-6">
+                <p>2025</p>
+                <hr>
+              </div>
+              <div class="card-text fs-6 text-end">
+                <p>Packet Tracer</p>
+              </div>
+
+            </div>
+          </div>
+          <a href="/pktracer" class="btn btn-primary">See More!</a>
+        </div>
+
+        <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
+          <div class="card bg-dark text-white" style="height:425px">
+            <div class="card-body">
+              <img class="card-img-top" 
+                   style="height:224px; object-fit: cover;" src="images/placeholder.jpg" alt="">
+
+              <div class="card-title pt-3">
+                <h4>Fibonacci Sequence</h4>
+              </div class>
+  
+              <div class="card-text fs-6">
+                <p>2025</p>
+                <hr>
+              </div> 
+              <div class="card-text fs-6 text-end">
+                <p>RISC-V</p>
+              </div>  
+
+            </div>
+          </div>
+          <a href="/fibonacci" class="btn btn-primary">See More!</a>
+        </div>
+
+        <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
+          <div class="card bg-dark text-white" style="height:425px">
+            <div class="card-body">
+              <img class="card-img-top" 
+                   style="height:224px; object-fit: cover;" src="images/placeholder.jpg" alt="">
+
+              <div class="card-title pt-3">
+                <h4>RhythmCS</h4>
+              </div class>
+      
+              <div class="card-text fs-6">
+                <p>2020 - 2024</p>
+                <hr>
+              </div>
+              <div class="card-text fs-6 text-end">
+                <p>LUAU, Python</p>
+              </div> 
+
+            </div>
+          </div>
+          <a href="/rcs" class="btn btn-primary">See More!</a>
+        </div>
       </div>
-
     </div>
   </body>
   <%- include("../reusables/footer.ejs") %>

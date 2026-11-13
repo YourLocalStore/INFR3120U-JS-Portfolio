@@ -41,4 +41,14 @@ router.get('/fibonacci', function(req, res, next) {
   res.render('pages/fibonacci', { title: 'Fibonacci' });
 });
 
+/* GET homelab page. */
+router.get('/homelab', function(req, res, next) {
+  res.render('pages/homelab', { title: 'Homelab' });
+});
+
+/* GET rhythmcs page. */
+router.get('/rcs', function(req, res, next) {
+  res.render('pages/rcs', { title: 'RhythmCS' });
+});
+
 module.exports = router;

@@ -80,10 +80,6 @@ container inherits itself to that container */
   animation-fill-mode: forwards;
 }
 
-/* #about-me section .container-fluid #card-right-of-right .card-text p{
-  float:left;
-} */
-
 @keyframes imgFadeIn{
   0%{opacity:0%;}
   100%{opacity:100%;}
@@ -94,6 +90,14 @@ container inherits itself to that container */
   background-color: #212529;
   padding:5px;
   border-radius:0.25rem
+}
+
+/* This section is reserved for the proejcts page. */
+
+.project-container .btn{
+  position:relative;
+  margin-top:-35px;
+  margin-left:20px;
 }
 
 /* This section is reserved for the header and footer sections of the page. */
