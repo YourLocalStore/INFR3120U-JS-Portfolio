@@ -13,10 +13,28 @@
 
 <%- include("../reusables/header.ejs") %>
 <body>
-  <div class="container-fluid">
-    <h1>
-      <%= title %>
-    </h1>
+  <div class="container-fluid mt-3 mx-auto w-75">
+    <div class="row">
+      <div class="col-12">
+        <a href="/projects"> < Go Back! </a>
+        <article>
+          <h1 class="mt-3"><%= title %></h1>
+          <p>2020 - 2024</p>
+          <hr>
+
+          <p>
+            A project I joined in 2020 that aimed for better accessibility for Vertically Scrolling Rhythm Game (VSRG) content through the ROBLOX
+            platform. 
+            <br><br>
+            Managed by the "RoVSRG" Organization, it initially was created as a community fork in 2017 to share 
+            VSRG content for PC and Mobile devices and was made open-source starting 2020 (however it is now defunct).
+            <br><br>
+            LUAU (A modified version of LUA) is used as default for the game engine, while Python was used to automate specific tasks (e.g.,
+            JSON/YAML file handling for thousands of asset files).
+          </p>
+        </article>
+      </div>
+    </div>
   </div>
 </body>
 <%- include("../reusables/footer.ejs") %>

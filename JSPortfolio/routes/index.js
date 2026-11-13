@@ -23,22 +23,22 @@ router.get('/contact', function(req, res, next) {
 
 /* GET sms page. */
 router.get('/sms', function(req, res, next) {
-  res.render('pages/sms', { title: 'SMS' });
+  res.render('pages/sms', { title: 'Student Management System' });
 });
 
 /* GET pktracer page. */
 router.get('/pktracer', function(req, res, next) {
-  res.render('pages/pktracer', { title: 'PKTracer' });
+  res.render('pages/pktracer', { title: 'Designing Networks' });
 });
 
 /* GET multithread page. */
 router.get('/multithread', function(req, res, next) {
-  res.render('pages/multithread', { title: 'Multithread' });
+  res.render('pages/multithread', { title: 'Multithreaded Sockets' });
 });
 
 /* GET fibonacci page. */
 router.get('/fibonacci', function(req, res, next) {
-  res.render('pages/fibonacci', { title: 'Fibonacci' });
+  res.render('pages/fibonacci', { title: 'Fibonacci Sequence' });
 });
 
 /* GET homelab page. */

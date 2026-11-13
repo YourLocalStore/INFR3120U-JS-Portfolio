@@ -13,10 +13,29 @@
 
 <%- include("../reusables/header.ejs") %>
 <body>
-  <div class="container-fluid">
-    <h1>
-      <%= title %>
-    </h1>
+  <div class="container-fluid mt-3 mx-auto w-75">
+    <div class="row">
+      <div class="col-12">
+        <a href="/projects"> < Go Back! </a>
+        <article>
+          <h1 class="mt-3"><%= title %></h1>
+          <p>2025</p>
+          <hr>
+
+          <p>
+            This is a project made using Python and MySQL for an Object Oriented
+            Programming course as a final project. While run locally, it supports
+            many different features: Local login, adding/removing students & faculty,
+            and viewing account information.
+          </p>
+        </article>
+      </div>
+      
+      <a href="https://github.com/YourLocalStore/SMS_Beta" class="mb-3">
+        *Click to view the public repository here!
+      </a>
+
+    </div>
   </div>
 </body>
 <%- include("../reusables/footer.ejs") %>

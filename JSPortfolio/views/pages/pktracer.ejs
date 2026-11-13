@@ -13,10 +13,25 @@
 
 <%- include("../reusables/header.ejs") %>
 <body>
-  <div class="container-fluid">
-    <h1>
-      <%= title %>
-    </h1>
+  <div class="container-fluid mt-3 mx-auto w-75">
+    <div class="row">
+      <div class="col-12">
+        <a href="/projects"> < Go Back! </a>
+        <article>
+          <h1 class="mt-3"><%= title %></h1>
+          <p>2025</p>
+          <hr>
+
+          <p>
+            A collaborative project made up of four people to design, troubleshoot and
+            implement networks in the "Packet Tracer" software. It features the 
+            use of VLAN trunking, inter-VLAN routing, single-area OSPF and BGP for internal 
+            and external communication outside of autonomous systems.
+          </p>
+
+        </article>
+      </div>
+    </div>
   </div>
 </body>
 <%- include("../reusables/footer.ejs") %>

@@ -13,10 +13,24 @@
 
 <%- include("../reusables/header.ejs") %>
 <body>
-  <div class="container-fluid">
-    <h1>
-      <%= title %>
-    </h1>
+  <div class="container-fluid mt-3 mx-auto w-75">
+    <div class="row">
+      <a href="/projects"> < Go Back! </a>
+      <div class="col-12">
+        <article>
+          <h1 class="mt-3"><%= title %></h1>
+          <p>2026</p>
+          <hr>
+
+          <p>
+            An assignment done for an Operating Systems course to simulate client,
+            server, and socket communication. It uses the 'asyncio' library to allow 
+            asynchronous communication using coroutines.
+          </p>
+          
+        </article>
+      </div>
+    </div>
   </div>
 </body>
 <%- include("../reusables/footer.ejs") %>

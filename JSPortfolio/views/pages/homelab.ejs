@@ -13,10 +13,31 @@
 
 <%- include("../reusables/header.ejs") %>
 <body>
-  <div class="container-fluid">
-    <h1>
-      <%= title %>
-    </h1>
+  <div class="container-fluid mt-3 mx-auto w-75">
+    <div class="row">
+      <div class="col-12">
+        <a href="/projects"> < Go Back! </a>
+        <article>
+          <h1 class="mt-3"><%= title %></h1>
+          <p>2026 - Present</p>
+          <hr>
+
+          <p>
+            This is a recent project that I have been working on, using spare and used equipment to gain more hands-on experience
+            in Linux, virtualization, and networking! 
+            <br><br>
+            My main system currently runs in the Proxmox Virtual Environment, using Ubuntu Server as one of its nodes to run software like
+            Immich, which is a free alternative to applications like Google Cloud and Amazon Photos. 
+            I have also currently used it for:
+              <ul>
+                <li>Minecraft Servers;</li>
+                <li>Discord Bots; and</li>
+                <li>Network-wide adblock!</li>
+              </ul>
+          </p>
+        </article>
+      </div>
+    </div>
   </div>
 </body>
 <%- include("../reusables/footer.ejs") %>
