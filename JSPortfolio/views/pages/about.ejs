@@ -19,13 +19,13 @@
 
     <div class="container-fluid pt-4 text-start">
       
-      <div class ="row">
-        <div class="col-12 col-md-8 col-lg-6 w-100">
-          <div class="card bg-dark text-white mb-3">
+      <div class ="row text-center">
+        <div class="col-12 col-lg-6 w-100">
+          <div class="card bg-dark text-white mb-3 pt-3">
             <div class="card-body">
               <div class="card-title">
                 <h1><%= title %>!</h1>
-                <p>Welcome to <%= title %></p>
+                <p>Here's what I do.</p>
               </div>
             </div>
           </div>
@@ -33,39 +33,83 @@
       </div>
 
       <div class="row">
-        <div class="col-12 col-md-8 col-lg-6 pb-4 w-45">
-          <div class="card bg-secondary text-white mb-3" style="height:400px">
+
+        <div class="col-12 col-lg-6 pb-4 w-45">
+          <div class="card bg-secondary text-white mb-3">
             <div class="card-body">
               <div class="card-title">
-                <h1>Hello!</h1>
-                <p>THIS IS SOME PLACEHOLDER TEXT!!!</p>
+                <h3>Hello!</h3>
               </div class>
 
               <div class="card-text fs-6">
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
+                <p>
+                  I am a second-year student at Ontario Tech University studying Networking and IT Security.
+                  I am always eager to learn about different things, and applying them practically.
+                  <br><br>
+                  Currently, I am looking to become a Network Engineer or a Systems Administrator in the future.
+                </p>
               </div>
+
             </div>
           </div>
-        </div>
           
-        <div class="col-12 col-md-8 col-lg-6 pb-4 w-45">
-          <div class="card bg-secondary text-white mb-3" style="height:400px">
-            <div class="card-body">
-              <img class="card-img-top" style="height:14rem; object-fit: cover;" src="images/placeholder.jpg" alt="">
-              <div class="card-title pt-3">
-                <h4>Hello!</h4>
-              </div class>
-
-              <div class="card-text fs-6">
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
-                <p>THIS IS PLACEHOLDER TEXT!!</p>
+          <div class="col-6 col-lg-6 pb-3 w-100">
+            <div class="card bg-secondary text-white pb-3">
+              <div class="card-body">
+                <div class="card-title">
+                  <h4>Technical Skills</h4>
+                  <hr>
+                </div class>
+          
+                <div class="card-text fs-6">
+                  <ul>
+                    <li>Python, SQL</li>
+                    <li>Troubleshooting/Building PCs</li>
+                    <li>Excel, Windows</li>
+                    <li>Soldering</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="col-6 col-lg-6 w-100">
+            <div class="card bg-secondary text-white pb-3">
+              <div class="card-body">
+                <div class="card-title">
+                  <h4>Currently Learning...</h4>
+                  <hr>
+                </div class>
+          
+                <div class="card-text fs-6">
+                  <ul>
+                    <li>HTML, JavaScript</li>
+                    <li>Linux (Ubuntu, Proxmox)</li>
+                    <li>Cisco CCNA/CCNP Content</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <div class="col-12 col-lg-6 w-45 mb-3">
+          <div class="card bg-dark text-white h-100">
+            <div class="card-body">
+              <video class="card-img-top" 
+                     style="height:700px; object-fit: cover;"
+                     src="/videos/aboutmevideo.mp4"
+                     controls
+                     muted
+                     poster="/images/limelight.png">
+                
+              </video>
+            </div>
+          </div>
+        </div>
+
       </div>
-      
     </div>
 
   </body>
