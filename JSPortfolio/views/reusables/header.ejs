@@ -1,12 +1,44 @@
-<!-- Taken from the Course Examples (Lecture 7)-->
+<!-- 
+  Taken from the Course Examples (Lecture 7)
+
+  This creates a functional nav-bar that uses the native navbar classes in Bootstrap.
+  The following classes are described as such:
+    "navbar"          - Which assigns a navbar element from Bootstrap.
+    "navbar-expand"   - Which is required by Bootsrap to wrap to .navbar in order to control navigation and color schemes.
+    "navbar-nav"      - Which is for implementing your navbar items into.
+    "navbar-dark"     - Which assigns a "dark" theme to the navbar when dark backgrounds are used by adding legible color schemes.
+    "bg-dark"         - Which assigns a dark background.
+    "container-fluid" - Which creates a flex-oriented container to hold all content.
+    "navbar-brand"    - Which sets aside a "brand image" to the side of the navbar.
+    "nav-item"        - Which are all the navigation items for the pages.
+    "img-fluid"       - Which is also a flex-oriented class in Bootstrap to give images a responsive look.
+-->
+
 <nav class="navbar navbar-expand navbar-dark bg-dark">
   <div class="container-fluid">
+
+    <!-- This is the "branding" of my page, creating a logo that is set aside the navbar. -->
     <a class="navbar-brand" href="/">
       <img class="img-fluid" src="/images/jt_sig2.png" alt="">
     </a>
 
-    <!-- https://getbootstrap.com/docs/5.0/utilities/spacing/ -->
+    <!-- 
+      "me-auto" - Set the "end" or the right-most side to be calculated by the browser for adjustment.
+      "ps-4"    - Set the padding of the right-most side relative to the default fontsize. (4 * 16px) = 64px
+    -->
     <ul class="navbar-nav me-auto ps-4">
+      <!-- 
+        EJS if/else conditions are used here to set an "active link". What that means is that when the user clicks on one
+        of the nav-items, the link will stay fully colored-in and acts like an indicator to which page the user
+        is currently on. 
+        
+        For the home page below for example, the text contained within <a> element (Home) stays white until the 
+        visitor moves to another page. 
+
+        As an additional note, the "title" is checked from the index.js within the routes folder.
+        "aria-current" is more of an accessibility property to tell screen readers and other assistive devices
+        about the element or page the visitor is on.
+      -->
       <li class="nav-item">
         <% if (title=="Joshua") { %>
           <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -15,6 +47,7 @@
             <% } %>
       </li>
 
+      <!-- nav-item for About Page -->
       <li class="nav-item">
         <% if (title=="About Me") { %>
           <a class="nav-link active" aria-current="page" href="/about">About</a>
@@ -23,6 +56,7 @@
             <% } %>
       </li> 
 
+      <!-- nav-item for Projects Page -->
       <li class="nav-item">
         <% if (title=="Projects") { %>
           <a class="nav-link active" aria-current="page" href="/projects">Projects</a>
@@ -31,6 +65,7 @@
             <% } %>
       </li>
 
+      <!-- nav-item for Contact Page -->
       <li class="nav-item">
         <% if (title=="Contact Me") { %>
           <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
@@ -40,7 +75,18 @@
       </li>
     </ul>
 
+    <!-- 
+      "lh-lg" in this context describes line height/spacing, relative to the units of the font size.
+      In this case, the spacing between lines is about 32px (lg-lg is equivalent to lh-2; 2 * 16 = 32px.) 
+    -->
     <div class="social-col lh-lg">
+
+      <!-- 
+        Another navigation bar is created, but for additional links (as icons) for my header. 
+        This gives two areas for the visitor to be able to access the Github, Linkedin or Email.
+          "pe-2"  - Is for the padding at the end of the page (rightmost area) with 2rem as a parameter. 
+          "gap-3" - Is for the spacing between buttons with 3rem as a parameter. 
+      -->
       <ul class="navbar navbar-nav ms-auto pe-2 gap-3">
         <li class="nav-item">
           <a href="https://github.com/YourLocalStore">
@@ -62,9 +108,19 @@
       </ul>
     </div>
 
-    <!-- Derived from https://getbootstrap.com/docs/5.3/components/navbar/ and
-         https://getbootstrap.com/docs/5.0/components/dropdowns/-->
+    <!-- 
+      Derived from https://getbootstrap.com/docs/5.3/components/navbar/ 
+      and https://getbootstrap.com/docs/5.0/components/dropdowns/
 
+      As an additional navigation item, a dropdown item is created for smaller screen sizes in order to fit all
+      navigation items. The similar navigation bar creation process is done, however, we describe more classes
+      using the Dropdown Bootstrap class and properties.
+        "dropdown-toggle"   - Which creates a trigger for the dropdown menu.
+        "data-bs-toggle"    - Which tells the <a> element that this is a collapsible element.
+        "dropdown-menu"     - Which, created from an unordered list, uses the Bootstrap class to create a pre-customized dropdown menu.
+        "dropdown-menu-end" - Which puts the dropdown-menu at the end of the navbar (in this implementation).
+        "aria-expanded"     - Which tells the screen reader/assistive device whether or not an element has expanded.
+    -->
     <div id="header-navbar-dropdown">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
@@ -72,24 +128,27 @@
             href="#" 
             role="button" 
             data-bs-toggle="dropdown" 
-            aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
+            aria-expanded="true">
+            <i class="fa-solid fa-bars"></i> <!-- FontAwesome icon for a vertical bar icon to depict a dropdown menu. -->
           </a>
           
           <ul class="dropdown-menu dropdown-menu-end">
             <li>
+              <!-- FontAwesome icon for Github-->
               <a class="dropdown-item" href="https://github.com/YourLocalStore">
                 <i class="fa-brands fa-github fa-xl"></i>
                 Github
               </a>
             </li>
             <li>
+              <!-- FontAwesome icon for Linkedin-->
               <a class="dropdown-item" href="https://ca.linkedin.com/in/joshua-tuibuen-436338351">
                 <i class="fa-brands fa-linkedin fa-xl"></i>
                 Linkedin
               </a>
             </li>
             <li>
+              <!-- FontAwesome icon for Feedback/Email -->
               <a class="dropdown-item" href="mailto:joshua.tuibuen@ontariotechu.net">
                 <i class="fa-solid fa-envelope fa-xl"></i>
                 Feedback

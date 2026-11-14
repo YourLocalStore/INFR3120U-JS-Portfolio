@@ -2,15 +2,17 @@ body {
   padding: 0px;
   font-family: "Inter";
   font-size: 18px;
-  zoom: 1.3;
+  zoom: 1.3; /* Defines a custom zoom of at least 130% by default. */
 }
 
 a {
   color: #00B7FF;
 }
 
-/* This is so that any element using position:absolute in this 
-container inherits itself to that container */
+/* 
+This is so that any element using position:absolute in this 
+container inherits itself to that container 
+*/
 #welcome-section .container-fluid{
   position:relative;
 }
@@ -44,7 +46,7 @@ container inherits itself to that container */
   z-index: 0; /* Sets the stack order of elements, lower #s --> Set below some element */
 }
 
-#welcome-section .container-fluid .banner-img{
+#welcome-section .container-fluid #banner-img{
   position:absolute;
   top:0;
   left:0;
@@ -53,16 +55,17 @@ container inherits itself to that container */
   height:695px;
 
   object-fit:cover;
-  filter:brightness(0.45);
+
+  filter:brightness(0.45); /* Sets an effect to be applied, in this case we want to darken the image to 45% brightness. */
   z-index: 0;
 }
 
-#about-me section .container-fluid #card-left-of-jt .card-body h1,
-#about-me section .container-fluid #card-right-of-jt .card-body h1{
+#welcome-messages section .container-fluid #card-left-of-jt .card-body h1,
+#welcome-messages section .container-fluid #card-right-of-jt .card-body h1{
   font-weight: 600;
 }
 
-#about-me section .container-fluid #jt-image img{
+#welcome-messages section .container-fluid #jt-image img{
   opacity: 0%;
   display: block;
   position:relative;
@@ -74,15 +77,26 @@ container inherits itself to that container */
 
   z-index: 0;
 
+  /* This animation is for when the self-portrait fades in, within the home page. */
   animation-name: imgFadeIn;
   animation-delay:0.15s;
   animation: imgFadeIn 0.75s ease-in-out;
   animation-fill-mode: forwards;
 }
 
+/* 
+Define the keyframes for the animation. In this case, we start from 0% at 0% opacity then gradually eases
+into 100% opacity. 
+*/
 @keyframes imgFadeIn{
   0%{opacity:0%;}
   100%{opacity:100%;}
+}
+
+#welcome-messages section .container-fluid .jt-cards{
+  width: 90%;
+  height: 465px;
+  border: none;
 }
 
 #projects .project-home-header{
@@ -92,12 +106,17 @@ container inherits itself to that container */
   border-radius:0.25rem
 }
 
-/* This section is reserved for the proejcts page. */
-
+/* This section is reserved for the projects page. */
 .project-container .btn{
   position:relative;
   margin-top:-35px;
   margin-left:20px;
+}
+
+/* This section is reserved for the contact page. */
+.contact-form .form-container form textarea{
+  min-height:200px; 
+  max-height: 600px
 }
 
 /* This section is reserved for the header and footer sections of the page. */

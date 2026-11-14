@@ -1,4 +1,11 @@
 <head>
+  <!-- 
+    Describe a container here to contain all the content used for the page. 
+    Center it from both sides, and limit the width to 75% (w-75)
+
+    An article tag is used to hold the specific subject being talked about
+    in this page.
+   -->
   <link rel="stylesheet" href="/fontawesome-free-7.3.1-web/css/fontawesome.min.css">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
@@ -11,27 +18,31 @@
 
 </head>
 
+<!-- Header Import -->
 <%- include("../reusables/header.ejs") %>
 <body>
+  <!-- 
+    Describe a container here to contain all the content used for the page. 
+    Center it from both sides, and limit the width to 75% (w-75)
+
+    An article tag is used to hold the specific subject being talked about
+    in this page.
+   -->
   <div class="container-fluid mt-3 mx-auto w-75">
-    <div class="row">
-      <div class="col-12">
-        <a href="/projects"> < Go Back! </a>
-        <article>
-          <h1 class="mt-3"><%= title %></h1>
-          <p>2025</p>
-          <hr>
+    <a href="/projects"> < Go Back! </a>
+    <article>
+      <h1 class="mt-3"><%= title %></h1>
+      <p>2025</p>
+      <hr> <!-- This is used as a horizontal separator between content. -->
 
-          <p>
-            A collaborative project made up of four people to design, troubleshoot and
-            implement networks in the "Packet Tracer" software. It features the 
-            use of VLAN trunking, inter-VLAN routing, single-area OSPF and BGP for internal 
-            and external communication outside of autonomous systems.
-          </p>
-
-        </article>
-      </div>
-    </div>
+      <p>
+        A collaborative project made up of four people to design, troubleshoot and
+        implement networks in the "Packet Tracer" software. It features the 
+        use of VLAN trunking, inter-VLAN routing, single-area OSPF and BGP for internal 
+        and external communication outside of autonomous systems.
+      </p>
+    </article>
   </div>
 </body>
+<!-- Footer Import -->
 <%- include("../reusables/footer.ejs") %>

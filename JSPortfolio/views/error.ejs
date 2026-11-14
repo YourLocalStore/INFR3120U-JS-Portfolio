@@ -1,6 +1,8 @@
-<%- include("./reusables/header.ejs", {title: "Error!"}) %>
-
 <head>
+    <!-- 
+        These are all the required imports needed for header, footer, as well as any additional
+        functionality from Bootstrap, custom fonts, and FontAwesome. 
+    -->
     <link rel="stylesheet" href="/fontawesome-free-7.3.1-web/css/fontawesome.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
@@ -12,10 +14,13 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 </head>
 
+<!-- Header Import -->
+<%- include("./reusables/header.ejs", {title: "Error!"}) %>
+
 <div class="container-fluid">
     <h1><%= message %></h1>
     <h2><%= error.status %></h2>
     <pre><%= error.stack %></pre>
 </div>
-
+<!-- Footer Import -->
 <%- include("./reusables/footer.ejs", {title: "Error!"}) %>

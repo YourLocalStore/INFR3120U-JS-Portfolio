@@ -1,7 +1,15 @@
+/* 
+    Media queries are used here to only hide/show specific content from each view, or fix any possible issues
+    that each breakpoint might have when displaying certain content.
+
+    Each breakpoint that Bootstrap uses is described here:
+        https://getbootstrap.com/docs/5.2/layout/breakpoints/
+*/
+
 /* FOR THE 'XS' BREAKPOINT */
 @media only screen and (max-width:575px) {
     body {
-        zoom: 1 !important;
+        zoom: 1 !important; 
     }   
 
     #projects img {
@@ -16,11 +24,11 @@
         display: none;
     }
 
-    #about-me #card-right-of-jt{
+    #welcome-messages #card-right-of-jt{
         display:none;
     }
 
-    #about-me #card-left-of-jt .card{
+    #welcome-messages #card-left-of-jt .card{
         opacity:0;
     }
 }
@@ -43,11 +51,11 @@
         display: none;
     }
 
-    #about-me #card-right-of-jt{
+    #welcome-messages #card-right-of-jt{
         display:none
     }
 
-    #about-me #card-left-of-jt .card{
+    #welcome-messages #card-left-of-jt .card{
         opacity:0;
     }
 }
@@ -61,18 +69,26 @@
         display: none;
     }
 
-    #about-me #card-right-of-jt{
+    #welcome-messages #card-right-of-jt{
         display:none
     }
 
-    #about-me #card-left-of-jt .card{
+    #welcome-messages #card-left-of-jt .card{
         opacity:0;
     }
 
 
 }
 
-/* MODIFIED 'LG' BREAKPOINT */
+/* 
+
+MODIFIED 'LG' BREAKPOINT 
+
+The reason that both this breakpoint and the one below are modified, are because of issues when 
+displaying the navbar content at certain pixel widths, which would cause them to seem "scattered"
+around the navbar, seemingly not adjusting correctly
+
+*/
 @media only screen and (min-width:1000px) and (max-width:1199px) {
     body {
     zoom: 1 !important;
@@ -84,16 +100,6 @@
     .social-col ul a i{
         display: none;
     }
-
-    /* #about-me #card-left-of-jt .card {
-        width:100% !important;
-        text-align: left !important;
-    }
-
-    #about-me #card-right-of-jt .card {
-        width:100% !important;
-        text-align: right !important
-    } */
     
     .contact-form .row .form-container form .form-control{
     width:65% !important;

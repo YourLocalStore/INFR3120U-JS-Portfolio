@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-  
+  <!-- 
+    These are all the required imports needed for header, footer, as well as any additional
+    functionality from Bootstrap, custom fonts, and FontAwesome. 
+  -->
   <head>
-    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/fontawesome-free-7.3.1-web/css/fontawesome.min.css">
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
@@ -14,13 +16,46 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   </head>
 
+  <!-- Header Import -->
   <%- include("../reusables/header.ejs") %>
   <body>
 
+    <!-- A container that is defined for all cards within this page. The classes defined below are the Bootstrap
+      classes used throughout the entire page content to avoid repeating comments in this document as it's one of the larger
+      documents in this portfolio.
+
+      Class Definitions:
+        "container-fluid"         - A flex-oriented container that holds all of the content
+        "row"                     - The row of content that contains these columns
+        "text-[position]"         - Defines a position (start, end, center) for the text to be in.
+        "bg-[color]"              - Which is a Bootstrap class for elements that want to use a certain color (e.g., dark, primary, light)
+        "text-[color]"            - Which is the color of the text.
+        "col-[breakpoint]-[size]  - It is a Bootstrap class that defines how much of the grid the element takes up
+                                    within Bootstrap's 12-grid system.
+        "w-[size]"                - Defines a percentage-based width. 
+        "p[position]-[rem units]" - Padding, which uses position ( top (t), bottom (b), start (s), end (e), or x (start & end), or y (top & bottom) )
+                                    and a parameter for how many rem you want to move it by.
+        "m[position]-[rem units]" - Margin, which uses position ( top (t), bottom (b), start (s), end (e), or x (start & end), or y (top & bottom) )
+                                    and a parameter for how many rem you want to move it by.
+        "card"                    - Which is a class for a card to be created through Bootstrap
+        "card-body"               - The body section of the card class
+        "card-img-[position]"     - The image to be set either [top | bottom] in the card
+        "card-title"              - The card title
+        "card-text"               - Additional text to include in the card
+    -->
     <div class="container-fluid pt-4 text-start">
-      
+
+      <!-- 
+        This row only contains the header, which takes up all columns in the grid by default.
+        However, it will only take 6 for lg-sized breakpoints to leave space for other elements
+        that will go to the side at this breakpoint. 
+      -->
       <div class ="row text-center">
         <div class="col-12 col-lg-6 w-100">
+          <!-- 
+            Defines the card, as well as its theming (as defined from the class definitions above) 
+            It also pushes bottom margins down by 3 rem and adds 3 rem of padding to the top of the card content.
+          -->
           <div class="card bg-dark text-white mb-3 pt-3">
             <div class="card-body">
               <div class="card-title">
@@ -32,9 +67,21 @@
         </div>
       </div>
 
+      <!-- 
+        This class defines a Bootstrap row, which will contain the main content of the About page.
+        Which will include four cards (3 information cards, 1 video card). 
+      -->
       <div class="row">
 
-        <div class="col-12 col-lg-6 pb-4 w-45">
+        <!-- 
+          We only want to keep a half-half split between columns on larger viewpoints to make use of the 
+          space. For smaller viewports, each card will take up the entire grid and each item of the row
+          will be stacked.
+
+          A width percentage of 50 is set, to accomodate for larger screen sizes that may take up the entire
+          screen, so it should halved in order to leave space for the video card.
+        -->
+        <div class="col-12 col-lg-6 pb-4 w-50">
           <div class="card bg-secondary text-white mb-3">
             <div class="card-body">
               <div class="card-title">
@@ -53,7 +100,14 @@
             </div>
           </div>
           
-          <div class="col-6 col-lg-6 pb-3 w-100">
+          <!-- 
+            The next two cards (including this one) are nested. It's nested because we want to
+            keep it within the same column as the card implementation above, while not wanting
+            to set the cards beside each other. 
+          -->
+
+          <!-- This is the card listing technical skills. -->
+          <div class="col pb-3 w-100">
             <div class="card bg-secondary text-white pb-3">
               <div class="card-body">
                 <div class="card-title">
@@ -72,8 +126,9 @@
               </div>
             </div>
           </div>
-
-          <div class="col-6 col-lg-6 w-100">
+          
+          <!-- This is the card listing what I'm currently learning. -->
+          <div class="col w-100">
             <div class="card bg-secondary text-white pb-3">
               <div class="card-body">
                 <div class="card-title">
@@ -93,10 +148,19 @@
           </div>
 
         </div>
-
-        <div class="col-12 col-lg-6 w-45 mb-3">
+        
+        <!-- 
+          This is outside of the nest, because we can to define another column within the row.
+          For larger screens, this is the case, however as viewports get smaller, they will be stacked. 
+        -->
+        <div class="col w-50 mb-3">
           <div class="card bg-dark text-white h-100">
             <div class="card-body">
+
+              <!-- 
+                For the entire card, we only define a video in place of the card-img-top class.
+                Will include all of the controls and be muted when loaded. 
+              -->
               <video class="card-img-top" 
                      style="height:700px; object-fit: cover;"
                      src="/videos/aboutmevideo.mp4"
@@ -108,11 +172,10 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
   </body>
+  <!-- Footer Import -->
   <%- include("../reusables/footer.ejs") %>
   
 </html>

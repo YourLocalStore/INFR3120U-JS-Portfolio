@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  
+  <!-- 
+    These are all the required imports needed for header, footer, as well as any additional
+    functionality from Bootstrap, custom fonts, and FontAwesome. 
+  -->
   <head>
     <link rel="stylesheet" href="/fontawesome-free-7.3.1-web/css/fontawesome.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -14,15 +17,31 @@
 
   </head>
 
+  <!-- Header Import -->
   <%- include("../reusables/header.ejs") %>
   <body>
+
     <!-- 1st Section: Welcome -->
     <div id="welcome-section">
+
+      <!-- 
+      Define a specific section in the home page, in this case it's our banner.
+
+      Class Definitions:
+        "bg-dark"         - A class that defines a background color of an element to have a dark (black) background. 
+        "text-center"     - Which defines the text of the elements contained in the section to be centered.
+        "container-fluid" - A flex-oriented container that holds all of the content
+        "row"             - The row of content that contains these columns
+        "col"             - Defines a column of content to be used within the row
+        "pt-n"            - Equivalent to 'padding-top', where n is a number relative to rem units.
+        "pb-n"            - Equivalent to 'padding-bottom', where n is a number relative to rem units. 
+      -->
       <section class="bg-dark text-center">
         <div class="container-fluid">
-
-          <img class="banner-img" src="/images/home_banner_placeholder.png" alt="...">
-
+          <!-- *Note, taken by me, from one of my own projects. -->
+          <img id="banner-img" src="/images/home_banner_placeholder.png" alt="...">
+          
+          <!-- Contains the text, as well as the signature needed to introduce myself in the banner.-->
           <div class="row">
             <div class="welcome-text col pt-5 pb-5">
               <h1><%= title %> Tuibuen</h1>
@@ -38,30 +57,40 @@
       </section>
     </div>
 
-    <!-- 2nd Section: *Brief* About Me -->
-    <div id="about-me">
-      <section class="bg-light py-4 ps-sm-1">
+    <!-- 2nd Section: Welcome Messages -->
+    <div id="welcome-messages">
+
+      <!-- 
+          This is just a brief section of the two welcome messages that appear on either side of the screen. 
+          Similar classses are used, however Bootstrap Card classes are used, which will be defined below.
+       -->
+      <section class="py-4 ps-sm-1">
         <div class="container-fluid">
           <div class="row">
-
-            <!-- The decimal widths are chosen arbitrarily for two gaps in the middle to
-                 seem "even"-->
             <div class="col text-end" id="card-left-of-jt">
-              <div class="card bg-transparent text-white card-test" 
-                   style="width:90%; height:465px; border: none">
 
+              <!-- 
+              In this column (the left card beside the portrait).
+
+                Class Definitions:
+                  "card"           - A card containing some elements (e.g., text, images)
+                  "bg-transparent" - Where the background opacity is set to 0
+                  "text-white"     - Colors the text white
+                  "fs-n"           - Defines a font-size, where fs-1 is the largest size and is equivalent to h1 in standard HTML.
+              -->
+              <div class="card bg-transparent text-white jt-cards"> <!-- An extra class, jt-cards is assigned for styling in style.css -->
                 <div class="card-body">
-                  <h1 class="card-title fs-1">> Hello...</h1>
+                  <h1 class="card-title fs-1"> > Hello...</h1>
                   <div class="card-text">
                     <p>World!</p>
                   </div>
                 </div>
               </div>
             </div>
-          
+            
+            <!-- Similar process to create the card is also used above. -->
             <div class="col text-start" id="card-right-of-jt">
-              <div class="card bg-transparent text-white ms-auto card-test" 
-                   style="width:90%; height:465px; border: none">
+              <div class="card bg-transparent text-white ms-auto jt-cards">
                 <div class="card-body">
                   <h1 class="card-title fs-1">Welcome <</h1>
                   <div class="card-text">
@@ -70,25 +99,41 @@
                 </div>
               </div>
             </div>
-
+            
+            <!-- Portrait of self, to be centered in the banner-->
             <div id="jt-image">
+              <!-- "mx-auto" - Which calculates the margin across left and right margins automatically -->
               <img src="/images/jt_about.png" alt="..." class="mx-auto">
             </div>
-
           </div>
-
-
         </div>
       </section>
     </div>
 
     <!-- 3rd Section: Projects -->
     <div id="projects">
+      <!-- 
+        This tag creates a brief section for **some** of my projects and 
+        some things shown within the About page. Padding is applied used py and ps
+        Bootstrap classes.
+      -->
       <section class="bg-light py-2 ps-1">
         <div class="container-fluid">
-
+          
+          <!-- "w-100" - Which defines the width to be at 100% for all screens -->
           <div class="row w-100">
+            <!-- By default, we should take up all twelve grids, however for
+                 medium-sized breakpoints in Bootstrap, we should split them for
+                 both carousels used here since they become too wide.
+
+                  *Note that "xs, sm, md, lg, xl" is used in Bootstrap to define
+                  the breakpoints in which it should take up x amount of columns 
+                  in the grid. 
+                    https://getbootstrap.com/docs/5.3/layout/breakpoints/ 
+            -->
             <div class="col-12 col-md-6 pb-4">
+
+              <!-- Project Page Header for Carousel-->
               <div class="project-home-header">
                 <div class="container-fluid pt-2 text-center">
                   <h2>My Projects</h2>
@@ -97,8 +142,32 @@
               </div>
               
               <div class="col-12 text-center">
+                <!-- 
+                  This is derived from Bootstrap's examples of sliding carousels.
+                    https://getbootstrap.com/docs/5.3/components/carousel/
+                  
+                  Class Definitions:
+                    "carousel"      - Which is the carousel itself;
+                    "carousel-dark" - The type of styling; and
+                    "slide"         - The transition the carousel makes for each element
+                -->
                 <div id="index-carousel" class="carousel carousel-dark slide">
+                  <!-- 
+                    The class, "carousel-indicators" is used in Bootstrap to help the user
+                    see which slide they are on. It is then pushed downwards by a fixed value of 30px. 
+                  -->
                   <div class="carousel-indicators" style="bottom:-30px;">
+
+                    <!-- 
+                    We define buttons for all three slides that are used in this carousel.
+
+                      Class/Parameter Definitions:
+                        "data-bs-target"    - Which tells Bootstrap which ID we are targeting, in this case 'index-carousel'
+                        "data-bs-slide-to"  - Which tells which slide is where, in this case it's at the beginning (0)
+                        "active"            - Which is a class that tells us if we are on this carousel slide or not 
+                        "aria-current"      - Which is an accessibility property to see which items are currently active.
+                        "aria-label"        - Which is an accessibility property to see what slide you are on.
+                    -->
                     <button type="button" 
                             data-bs-target="#index-carousel" 
                             data-bs-slide-to="0" 
@@ -118,11 +187,29 @@
                             aria-label="Slide 3">
                     </button>
                   </div>
-
+                  
+                  <!-- This is the main content of the carousel, defined as a "carousel-inner" class. -->
                   <div class="carousel-inner">
+                    <!-- 
+                      For each carousel item, they must be active, otherwise it may not show up.
+                      The interval is defined in milliseconds.
+                    -->
                     <div class="carousel-item active" data-bs-interval="10000">
-                      <div class="col-12 text-center py-2">
+                      
+                      <!-- 
+                        Cards are actually implemented in here to both show image and more legible
+                        text using a background, compared to standalone carousels which do not have these
+                        backgrounds. 
+
+                        A similar process in card creation is used for the other two cards below, after
+                        this one, for the Student Management System.
+                      -->
+                      <div class=" text-center py-2">
                         <div class="card bg-secondary text-white">
+                          <!-- 
+                            "object-fit" is used with the contain parameter to keep the original image
+                            without stretching. 
+                          -->
                           <img class="card-img-top" 
                                style="height:224px; object-fit: contain;" 
                                src="images/sms.png" alt="">
@@ -132,9 +219,10 @@
                         </div>
                       </div>
                     </div>
-
+                    
+                    <!-- Card for Multithreaded Socket project -->
                     <div class="carousel-item" data-bs-interval="2000">
-                      <div class="col-12 text-center py-2">
+                      <div class="text-center py-2">
                         <div class="card bg-secondary text-white">
                           <img class="card-img-top" 
                                style="height:224px; object-fit: contain" 
@@ -145,9 +233,10 @@
                         </div>
                       </div>                     
                     </div>
-
+                    
+                    <!-- Card for Packet Tracer project -->
                     <div class="carousel-item">
-                      <div class="col-12 text-center py-2">
+                      <div class="text-center py-2">
                         <div class="card bg-secondary text-white">
                           <img class="card-img-top" 
                                style="height:224px; object-fit: contain" 
@@ -159,12 +248,20 @@
                       </div>                      
                     </div>
                   </div>
-
+                  
+                  <!-- 
+                    The "carousel-control-prev" and "carousel-control-next" class is used to go back/forward a slide. 
+            
+                    Class/Parameter Definitions:
+                      "data-bs-target"              - Which is the target carousel
+                      "data-bs-slide"               - Which is what we want to do when we slide (i.e., go back)
+                      "carousel-control-prev-icon"  - The class for the default backwards icon in Bootstrap for carousel indicators
+                  -->
                   <button class="carousel-control-prev" 
                           type="button" 
                           data-bs-target="#index-carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden">Previous</span> <!-- Accessibility class for screen readers, which are not visible -->
                   </button>
 
                   <button class="carousel-control-next" 
@@ -173,9 +270,12 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
-                
                 </div>
-
+                
+                <!-- 
+                  A button is defined here to send the user to the Projects page to have a full view
+                  of all the projects. 
+                -->
                 <div class="col-12 mt-3 text-center">
                   <a href="/projects" class="btn btn-dark">Click to see more of my projects!</a>
                 </div>
@@ -183,6 +283,7 @@
               </div>
             </div>
             
+            <!-- About Page Header for Carousel-->
             <div class="col-12 col-md-6 pb-4">
               <div class="project-home-header">
                 <div class="container-fluid pt-2 text-center">
@@ -191,7 +292,17 @@
                 </div>
               </div>
 
+              <!-- 
+                The implementation for this carousel is exactly the same as above. Detailed documentation
+                can be referred to from there.
+
+                The only difference is that it does not contain the caption below the image which is
+                contained within the <card-body> class. It only uses a standard <img> tag with the
+                Bootstrap <card-img-top> class for cards.
+              -->
               <div class="col-12 text-center">
+
+                <!-- The target for this carousel is the ID of "index-about-carousel" -->
                 <div id="index-about-carousel" class="carousel carousel-dark slide">
                   <div class="carousel-indicators" style="bottom:-30px;">
                     <button type="button" 
@@ -260,7 +371,9 @@
                   </button>
               
                 </div>
-
+                <!-- 
+                  A button is defined here to send the user to the About page to see more about me.
+                -->
                 <div class="col-12 mt-3 text-center">
                   <a href="/about" class="btn btn-dark">Click to see more about me!</a>
                 </div>
@@ -275,6 +388,7 @@
     </div>
 
   </body>
+  <!-- Footer Import -->
   <%- include("../reusables/footer.ejs") %>
   
 </html>

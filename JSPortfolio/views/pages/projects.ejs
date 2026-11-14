@@ -2,7 +2,6 @@
 <html>
   
   <head>
-    <title><%= title %></title>
     <link rel="stylesheet" href="/fontawesome-free-7.3.1-web/css/fontawesome.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
@@ -16,10 +15,41 @@
 
   <%- include("../reusables/header.ejs") %>
   <body>
-    <div class="project-container container-fluid pt-2">
+    <!-- 
+      The main container that holds all of the elements for the projects. The classes defined below are the Bootstrap
+      classes used throughout the entire page content to avoid repeating comments in this document as it's one of the larger
+      documents in this portfolio.
 
+      Class Definitions:
+        "container-fluid"         - A flex-oriented container that holds all of the content
+        "row"                     - The row of content that contains these columns
+        "text-[position]"         - Defines a position (start, end, center) for the text to be in.
+        "bg-[color]"              - Which is a Bootstrap class for elements that want to use a certain color (e.g., dark, primary, light)
+        "text-[color]"            - Which is the color of the text.
+        "col-[breakpoint]-[size]  - It is a Bootstrap class that defines how much of the grid the element takes up
+                                    within Bootstrap's 12-grid system.
+        "w-[size]"                - Defines a percentage-based width. 
+        "p[position]-[rem units]" - Padding, which uses position ( top (t), bottom (b), start (s), end (e), or x (start & end), or y (top & bottom) )
+                                    and a parameter for how many rem you want to move it by.
+        "m[position]-[rem units]" - Margin, which uses position ( top (t), bottom (b), start (s), end (e), or x (start & end), or y (top & bottom) )
+                                    and a parameter for how many rem you want to move it by.
+        "card"                    - Which is a class for a card to be created through Bootstrap
+        "card-body"               - The body section of the card class
+        "card-img-[position]"     - The image to be set either [top | bottom] in the card
+        "card-title"              - The card title
+        "card-text"               - Additional text to include in the card 
+    -->
+    <div class="project-container container-fluid pt-2">
       <div class="row">
+
+        <!-- 
+          This is the column for my header only, which is created as a card.
+          There are different column breakpoints attached to these cards (typically the same), because
+          since there are 6 cards, we should view them differently across different viewports. 
+        -->
         <div class="col-12 col-md-8 col-lg-6 w-100 mx-auto">
+
+          <!-- Creates the Bootstrap card, themed as a dark card with white, centered text. -->
           <div class="card bg-dark text-white mb-3 pt-3 text-center">
             <div class="card-body">
               <div class="card-title">
@@ -31,8 +61,18 @@
         </div>
       </div>
 
+      <!-- 
+        This is the second row, below the header, which creates all of the columns for each project.
+        All columns will have the same breakpoints, styling, and width to be even across all viewports. 
+
+        Card Classes defined for this row:
+          Breakpoints: col-12 col-xl-4 col-md-12 col-lg-6
+          Width: 45%
+          Styling: card bg-dark text-white
+      -->
       <div class="row text-start">
 
+        <!-- 1st Card - Homelab Project. -->
         <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
           <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
@@ -53,9 +93,16 @@
 
             </div>
           </div>
+          
+          <!-- Button is defined outside of the card to prevent it from being pushed down when text wraps
+               on smaller screen sizes.
+
+               This button leads to another page, connected to this project with info about it (homelab.ejs)
+          -->
           <a href="homelab" class="btn btn-primary">See More!</a>
         </div>
 
+        <!-- 2nd Card - Multithreaded Socket Project -->
         <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
           <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
@@ -75,9 +122,12 @@
 
             </div>
           </div>
+
+          <!-- Button leading to information contained in multithread.ejs -->
           <a href="/multithread" class="btn btn-primary">See More!</a>
         </div>       
 
+        <!-- 3rd Card - Student Management System Project -->
         <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
           <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
@@ -97,9 +147,12 @@
               
             </div>
           </div>
+
+          <!-- Button leading to information contained in sms.ejs -->
           <a href="sms" class="btn btn-primary">See More!</a>
         </div>
 
+        <!-- 4th Card - Designing Networks Project -->
         <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
           <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
@@ -120,9 +173,12 @@
 
             </div>
           </div>
+
+          <!-- Button leading to information contained in pktracer.ejs -->
           <a href="/pktracer" class="btn btn-primary">See More!</a>
         </div>
 
+        <!-- 5th Card - Fibonacci Sequence Project -->
         <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
           <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
@@ -143,9 +199,12 @@
 
             </div>
           </div>
+
+          <!-- Button leading to information contained in fibonacci.ejs -->
           <a href="/fibonacci" class="btn btn-primary">See More!</a>
         </div>
 
+        <!-- 5th Card - RhythmCS Project -->
         <div class="col-12 col-xl-4 col-md-12 col-lg-6 pb-2 w-45">
           <div class="card bg-dark text-white" style="height:425px">
             <div class="card-body">
@@ -166,6 +225,8 @@
 
             </div>
           </div>
+
+          <!-- Button leading to information contained in rcs.ejs -->
           <a href="/rcs" class="btn btn-primary">See More!</a>
         </div>
       </div>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-  
+  <!-- 
+    These are all the required imports needed for header, footer, as well as any additional
+    functionality from Bootstrap, custom fonts, and FontAwesome. 
+  -->
   <head>
-    <title><%= title %></title>
     <link rel="stylesheet" href="/fontawesome-free-7.3.1-web/css/fontawesome.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css'/>
@@ -14,24 +16,54 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   </head>
 
+  <!-- Header Import -->
   <%- include("../reusables/header.ejs") %>
   <body>
-
+    <!-- 
+      This is a class for a contact form, which is embedded in a fluid container, but also
+      since it's a single column, we can also define it to be a "col".
+      
+        Class Definitions:
+          "container-fluid" - A flex-oriented container that holds all of the content.
+          "pt-n"            - Equivalent to 'padding-top', where n is a number relative to rem units.
+          "pb-n"            - Equivalent to 'padding-bottom', where n is a number relative to rem units. 
+          "col"             - Defines a column of content to be used within the row
+          "row"             - The row of content that contains these columns
+          "text-center"     - Which centers the text contained in the fluid container 
+    -->
     <div class="contact-form container-fluid pt-3 pb-3 col-12 w-75 text-center">
-
       <div class="row">
+        <!-- 
+          This serves as a text header for the contact page, which also tells the visitor
+          what page they're on. 
+
+          Class Definitions:
+            "bg-dark" - Colors the background to be 'dark' themed by Bootstrap.
+        -->
         <div class="bg-dark pt-3" style="color:white">
           <h3>Contact Me!</h3>
           <p>Have any comments? Feel free to let me know!</p>
         </div>
         
+        <!-- 
+        The form is defined here under class 'form-container'
+          Class Definitions:
+            "bg-secondary" - Which is defined as a secondary color (gray) by Bootstrap. 
+        -->
         <div class="form-container bg-secondary pt-3 pb-3" style="color:white">
+
+          <!-- Create a form, which allows the user to forward plaintext messages to my email. -->
           <form action="mailto:joshua.tuibuen@ontariotechu.net" 
                 method="post" 
                 enctype="text/plain">
 
-            <!--https://getbootstrap.com/docs/5.0/utilities/sizing/
-                Width Control!! -->
+            <!-- 
+              The field for a name, which is required.
+                Class Definitions:
+                  "form-control" - A Bootstrap class that allows the customizability of form elements.
+                  "w-n"          - Set the width across the element that it is contained in, where n is some percentage value.
+                  "mx-auto"      - Automatically set the left/right margin. In this case the element needs to be centered. 
+            -->
             <div class="mb-3">
               <label for="n-input" class="form-label">Name</label>
               <input type="text" 
@@ -39,7 +71,8 @@
                       id="n-input" 
                       required>
             </div> 
-          
+            
+            <!-- The field for an email, which is required. -->
             <div class="mb-3">
               <label for="email-input" class="form-label">Email Address</label>
               <input type="email" 
@@ -48,24 +81,25 @@
                       required>
             </div>
 
+            <!-- 
+              This is the field for the comments that a user wants to make in the contact form.
+              It defines a text area field for these comments, using the same form-control class
+              defined in previous input fields. 
+            -->
             <div class="mb-3">
               <label for="comment-input" class="form-label">Share Any Message!</label><br>
               <textarea id="comment-input" 
                         class="form-control w-100 mx-auto"
-                        style="min-height:200px; max-height: 600px"
                         name="comments" placeholder="Questions, concerns, comments..."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
-
       </div>
-
-      
     </div>
-
   </body>
+  <!-- Footer Import -->
   <%- include("../reusables/footer.ejs") %>
   
 </html>

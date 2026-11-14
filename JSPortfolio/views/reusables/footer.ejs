@@ -8,41 +8,79 @@
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 </head>
 
-<!-- Override the Bootstrap CSS, as seen in the Stack Forum provided in course-->
+<!-- 
+    Override the Bootstrap CSS, as seen in the Stack Forum provided in course
+    https://stackoverflow.com/questions/20721248/how-can-i-override-bootstrap-css-styles
+ -->
 <body id="bootstrap-overrides">
-
+  <!-- 
+    Using the footer semantic tag, we define a footer with the following Bootstrap classes:
+    bg-dark and text-white, which color the background of the footer and the text of the footer,
+    and py-3, which is "padding-y for both top and bottom padding. 
+  -->
   <footer class="bg-dark text-white py-3">
+    <!-- 
+      Containers are used here to "contain" the content and apply the appropriate styling.
+      "container-fluid" in Bootstrap will use flex, compared to a regular container for responsiveness. 
+    -->
     <div class="container-fluid">
+      <!-- When creating columns in a row, we must call the "row" Bootstrap class. -->
       <div class="row">
 
+        <!-- 
+          This is the first column, creating a navbar for navigating throughout the site.
+          The navbar is created in Bootstrap classes with "navbar-nav" and "nav-item"
+
+          Class Definitions:
+            "navbar-nav" - "For a full-height and lightweight navigation (including support for menus)."
+            "nav-item"   - The items contained within the navbar. 
+            https://getbootstrap.com/docs/5.3/getting-started/introduction
+
+          Additionally, "col-6" describes how many columns in the grid that Bootstrap will take up.
+          Bootstrap operates on a 12-grid system, so this column takes up half the screen.
+        -->
         <div class="col-6 pb-3 text-center text-md-center">
           <h5>Categories</h5>
 
+          <!-- 
+            "lh-1" in this context describes line height/spacing, relative to the units of the font size.
+            In this case, the spacing between lines is about 16px. 
+          -->
           <ul class="navbar-nav lh-1">
+
+            <!-- nav-item for Home Page -->
             <li class="nav-item">
               <a class="nav-link category-link" href="/">Home</a>
             </li>
-
+            
+            <!-- nav-item for About Page -->
             <li class="nav-item">
               <a class="nav-link category-link" href="/about">About</a>
             </li>
-
+            
+            <!-- nav-item for Project Page -->
             <li class="nav-item">
               <a class="nav-link category-link" href="/projects">Projects</a>
             </li>
-
+            
+            <!-- nav-item for Contact Page -->
             <li class="nav-item">
               <a class="nav-link category-link" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
-
-        <div class="col-6 text-center text-md-center">
+        
+        <!-- 
+          This is a column for all the social media/contact links in icon format.
+            "text-center" - Centers all of the text contained within the element. 
+        -->
+        <div class="col-6 text-center">
           <h5>Contact</h5>
-          
-          <div class="social-col lh-lg">
+
+          <div class="social-col">
+            <!-- In FontAwesome, "fa-xl" resizes the image to the second-largest size it can provide (24px) -->
             <a href="https://github.com/YourLocalStore">
-              <i class="fa-brands fa-github fa-xl"></i>
+              <i class="fa-brands fa-github fa-xl"></i> 
             </a>
 
             <a href="https://ca.linkedin.com/in/joshua-tuibuen-436338351">
@@ -55,10 +93,16 @@
 
           </div>
         </div>
+        
+        <!-- 
+          Since this will be positioned at the bottom, it can take up all column space in the 12-grid system. 
 
+            Class Definitions:
+              "fs-6" - Font size, which defaults to 1rem and is relative to the default font size (16px).
+         -->
         <div class="col-12 text-center pt-3">
           <div class="copyright">
-            <a class="fs-6 lh-lg" href="#">
+            <a class="fs-6" href="#">
               &copy; 2026, Joshua Tuibuen. All Rights Reserved.
             </a>
           </div>
